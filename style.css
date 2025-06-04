@@ -1,0 +1,109 @@
+html body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#page-header {
+    position: sticky;
+    top: 0;
+    margin: auto;
+    height: 100px;
+    min-width: 100vw;
+    max-width: 100vw;
+    width: 100vw;
+    background-color: #9404B4;
+    color: tomato;
+    display: flex;
+    justify-content: center;
+}
+
+#header-logo-div {
+    height: 100px;
+    display: flex;
+}
+
+#header-logo-div img {
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    margin: auto;
+    display: block;
+}
+.header-icon {
+    /* TODO: fix centering of icons on header */
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    margin: auto;
+    display: inline;
+}
+.header-icon-nav {
+    margin-left: 48px;
+}
+.header-icon-nav-img {
+    width: 32px;
+}
+.invert {
+    filter: invert(100%);
+}
+.header-icon-right {
+    margin-right: 48px;
+}
+.header-icon-search-img {
+    height: 26px;
+    margin-right: 24px;
+    margin-bottom: 1.25px;
+}
+.header-icon-cart-img {
+    margin-top: 0;
+    height: 30px;
+}
+
+/* 
+    main carousel 
+    TODO: make more responsive, remove margins when screen size is mobile etc 
+*/
+.main-content {
+    width: 75vw;
+    justify-content: center;
+    margin: auto
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        width: 100vw;
+    }
+    .main-content {
+        max-width: 75vw;
+        justify-content: center;
+        margin: auto;
+    }
+    .main-carousel {
+        margin: 25px 50px 0px 50px;
+        background-color: lightgrey;
+        height: 30vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        width: 100vw;
+    }
+    .main-content {
+        width: 100vw;
+        justify-content: center;
+        margin: auto;
+    }
+    .main-carousel {
+        margin: 0;
+        background-color: lightgrey;
+        height: 40vh;
+        width: 100vw;
+    }
+    p {
+        margin: 0;
+    }
+}
+
