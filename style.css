@@ -15,14 +15,16 @@ html body {
     max-width: 100vw;
     width: 100vw;
     background-color: #9404B4;
-    color: tomato;
     display: flex;
     justify-content: center;
 }
 
 #header-logo-div {
+    position: absolute;
     height: 100px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #header-logo-div img {
@@ -30,7 +32,6 @@ html body {
     align-items: center;
     max-width: 200px;
     margin: auto;
-    display: block;
 }
 .header-icon {
     /* TODO: fix centering of icons on header */
@@ -67,26 +68,73 @@ html body {
     TODO: make more responsive, remove margins when screen size is mobile etc 
 */
 .main-content {
-    width: 75vw;
     justify-content: center;
-    margin: auto
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* media query for compressed desktop / tablet view */
 @media screen and (min-width: 600px) {
     body {
         width: 100vw;
     }
     .main-content {
-        max-width: 75vw;
         justify-content: center;
+        margin-top: 0px;
         margin: auto;
     }
     .main-carousel {
-        margin: 25px 50px 0px 50px;
+        position: sticky;
+        margin-top: 0;
+        margin: auto;
         background-color: lightgrey;
-        height: 30vw;
+        height: 40vh;
+    }
+    p {
+        margin: 0;
+    }
+    .main-categories {
+        flex-wrap: wrap;
+        min-width: 100vw;
+        max-width: 750px;
     }
 }
+
+/* media query for desktop view */
+@media screen and (min-width: 750px) {
+    body {
+        width: 100vw;
+    }
+    .main-content {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-carousel {
+        min-width: 750px; /* TODO: maybe fix resizing when i connect to a larger screen */
+        max-width: 1250px;
+        margin: 25px 0 0 0;
+        background-color: lightgrey;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* p {
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-inline: auto;
+    } */
+}
+
+/* media query for mobile view */
 @media screen and (max-width: 600px) {
     body {
         width: 100vw;
@@ -105,5 +153,57 @@ html body {
     p {
         margin: 0;
     }
+    .main-categories {
+        flex-wrap: wrap;
+        min-width: 100vw !important;
+        max-width: 600px;
+    }
+    .main-category {
+        width: 175px !important;
+        height: auto;
+    }
 }
 
+.main-categories {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 750px; 
+    max-width: 1250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-category {
+    width: 200px;
+    height: 70px;
+    margin-bottom: 12.5px;
+    background-color: lightgray;
+    transition: 0.25s;
+}
+
+.main-category:hover {
+    background-color: #9404B4;
+    cursor: pointer;
+}
+
+.main-category img {
+    width: auto;
+    max-width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15px;   
+    margin-bottom: 15px;
+}
+
+#category-logo-fantagraphics {
+    height: 20px;
+    width: 150px;
+    margin-top: 25px;   
+    margin-bottom: 25px;
+}
