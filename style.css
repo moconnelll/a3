@@ -18,6 +18,7 @@ html body {
     background-color: #9404B4;
     display: flex;
     justify-content: center;
+    z-index: 1000;
 }
 
 #header-logo-div {
@@ -48,6 +49,21 @@ html body {
 .header-icon-nav-img {
     width: 32px;
 }
+.header-icon-nav-link {
+    background-color: transparent !important;
+    /* overwriting default browser agent/css button styling */
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+.close-hamburger-menu-button {
+    display: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    margin: 4px;
+}
 .invert {
     filter: invert(100%);
 }
@@ -63,25 +79,86 @@ html body {
     margin-top: 0;
     height: 30px;
 }
+.hamburger-menu-button img {
+    background-color: transparent;
+}
 
 /* for hamburger menu pop-up */
 
 .hamburger-menu {
     position: fixed;
-    width: 100%;
+    width: 25%;
     height: 100%;
     background-color: #9404B4;
     color: white;
     display: none;
     flex-direction: column;
     justify-content: left;
-    transition: transform 0.3s ease-in-out;
+    transition: 0.5s ease;
+    z-index: 1000;
 }
 
 .hamburger-menu.open {
     display: flex;
-    transition: transform 0.3s ease-in-out;
+    transition: 0.5s ease;
 }
+
+.hamburger-menu.open ~ .main-content {
+    filter: brightness(50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none; 
+    /* dims most of page (besides hamburger nav menu and page header, and 
+    disables interaction with main content when hamburger menu is open */
+}
+
+/* the 2 selectors below swap the states of hamburger menu icons 
+(hamburger vs close) on click */
+.hamburger-menu.open .header-icon-nav-link {
+    display: none;
+}
+
+.hamburger-menu.open .close-hamburger-menu-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hamburger-menu-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.hamburger-menu-nav ul li {
+    padding: 20px;
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+
+.hamburger-menu-nav ul li:first-child {
+    border-top: 1px solid white;
+}
+
+.hamburger-menu-nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.hamburger-menu-nav ul li:hover a {
+    color: #9404B4;
+}
+
+.hamburger-menu-nav ul li:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
 
 /* 
     main carousel 
@@ -92,6 +169,8 @@ html body {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.3s ease;
+    filter: brightness(100%);
 }
 
 
@@ -139,10 +218,13 @@ html body {
         margin-left: auto;
         margin-right: auto;
     }
+    .top-space-filler {
+        height: 25px;
+    }
     .main-carousel {
         min-width: 750px;
         max-width: 1250px;
-        margin: 25px 0 0 0;
+        margin: 0 0 0 0;
         background-color: lightgrey;
         height: 40vh;
         display: flex;
@@ -208,6 +290,24 @@ html body {
     .main-product {
         display: table-cell;
         flex: 0 0 auto;
+    }
+    .hamburger-menu {
+        width: 100%;
+    }
+    .hamburger-menu ul li a {
+        margin-left: 10px;
+    }
+    #header-logo-div img {
+        width: auto;
+    }
+    .header-icon-nav {
+        margin-left: 1rem;
+    }
+    .header-icon-right {
+        margin-right: 1rem;
+    }
+    .header-icon-search-img {
+        margin-right: auto;
     }
 }
 

@@ -23,6 +23,9 @@
             <button id="hamburger-menu-button" href="" class="header-icon-nav-link">
                 <img src="images/nav.svg" alt="Hamburger Menu Icon" class="header-icon-nav-img invert"/>
             </button>
+            <button id="close-hamburger-menu-button" href="" class="close-hamburger-menu-button">
+                <img src="images/close.svg" alt="Close Hamburger Menu Icon" class="header-icon-close-img invert"/>
+            </button>
         </div>
         <div id="header-logo-div">
             <img id="header-logo-img" src="images/minotaur-logo-trimmed.png" alt="Minotaur Logo">
@@ -42,7 +45,6 @@
         <!-- ideally, with react or a similar framework, 
         this menu would be included as a component to make the code 
         more modular / less repetitive across page files -->
-        <button id="close-hamburger-menu-button" class="close-hamburger-menu-button">&times;</button>
         <nav class="hamburger-menu-nav">
             <ul>
                 <li>
@@ -68,6 +70,10 @@
     </div>
     
     <main class="main-content">
+        <!-- top-space-filler is solely to make sure the top blank 25px 
+         (that should be a margin-top on main-carousel)
+         is dimmed when the hamburger menu is opened -->
+        <div class="top-space-filler"></div>
         <section class="main-carousel">
             <!-- TODO: add/create promo images/featured products-->
             <!-- TODO: animated slideshow would also be good -->
