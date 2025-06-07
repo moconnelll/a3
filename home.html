@@ -20,9 +20,9 @@
     <header id="page-header">
         <div class="header-icon header-icon-nav">
             <!-- TODO: ADD HAMBURGER MENU -->
-            <a href="" class="header-icon-nav-link">
+            <button id="hamburger-menu-button" href="" class="header-icon-nav-link">
                 <img src="images/nav.svg" alt="Hamburger Menu Icon" class="header-icon-nav-img invert"/>
-            </a>
+            </button>
         </div>
         <div id="header-logo-div">
             <img id="header-logo-img" src="images/minotaur-logo-trimmed.png" alt="Minotaur Logo">
@@ -37,6 +37,35 @@
             </a>
         </div>
     </header>
+
+    <div id="hamburger-menu" class="hamburger-menu">
+        <!-- ideally, with react or a similar framework, 
+        this menu would be included as a component to make the code 
+        more modular / less repetitive across page files -->
+        <button id="close-hamburger-menu-button" class="close-hamburger-menu-button">&times;</button>
+        <nav class="hamburger-menu-nav">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Comics</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">More</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     
     <main class="main-content">
         <section class="main-carousel">
@@ -46,7 +75,7 @@
         </section>
 
         <aside class="main-carousel-dots">
-
+            <!-- TODO: add these -->
         </aside>
 
         <section class="main-categories main-categories-publishers">
@@ -180,8 +209,12 @@
                 </div>
             </section>
         </section>
-
-        
     </main>
+
+    <footer>
+        <!-- TODO: make footer -->
+    </footer>
+
+    <script src="hamburger.js"></script>
 </body>
 </html>
