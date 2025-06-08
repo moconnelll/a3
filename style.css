@@ -288,7 +288,7 @@ html body {
         scroll-snap-type: x mandatory;
         gap: 1rem;
         min-width: 100% !important;
-        max-width: 750px;
+        max-width: 600px !important;
         display: flex;
         flex-direction: row;
         overflow-x: scroll !important;
