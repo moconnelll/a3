@@ -1,0 +1,128 @@
+.product-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+.product-image {
+    width: fit-content;
+}
+.product-image img {
+    display: flex;
+    min-width: 400px;
+    max-width: 25vw;
+    height: auto;
+    margin-right: 4vw;
+    padding-left: -2vw;
+}
+.product-details {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: flex-start;
+}
+.product-details h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+.product-details h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.product-price {
+    color: #9404B4;
+    margin-top: -0.5rem;
+}
+.product-price:before {
+    content: "$";
+}
+.product-description {
+    max-width: 650px;
+}
+.product-cart-buttons-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1rem;
+    height: fit-content;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.product-quantity-div {
+    margin-left: 20px;
+    height: fit-content;
+    align-items: center;
+    vertical-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-cart-buttons-div button {
+    width: 200px;
+    padding: 15px;
+    vertical-align: center;
+    border: none;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    transition: 0.15s;
+    background-color: lightgray;
+}
+.product-cart-buttons-div button:hover {
+    background-color: #9404B4;
+    color: white;
+    cursor: pointer;
+    /* TODO: if i have time, add a +1 pop-up onclick to nav bar cart button */
+    /* also, change add to cart button to "added to cart" */
+}
+.product-quantity-div button {
+    width: 50px;
+    align-items: center;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    transition: 0.15s;
+    background-color: lightgray;
+}
+.product-quantity-div p {
+    width: 50px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    transition: 0.15s;
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 768px) {
+    .product-display {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-image img {
+        max-width: 60vw;
+        margin-right: 0;
+    }
+    .product-details {
+        align-items: left;
+        text-align: left;
+    }
+    .product-details h1 {
+        font-size: 1.5rem;
+    }
+    .product-details h3 {
+        font-size: 1rem;
+    }
+    .product-cart-buttons-div button, p {
+        width: 100%;
+        align-items: space-between;
+    }
+}

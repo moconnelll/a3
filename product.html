@@ -4,8 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minotaur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header id="page-header">
+        <div class="header-icon header-icon-nav">
+            <button id="hamburger-menu-button" href="" class="header-icon-nav-link">
+                <img src="images/nav.svg" alt="Hamburger Menu Icon" class="header-icon-nav-img invert"/>
+            </button>
+            <button id="close-hamburger-menu-button" href="" class="close-hamburger-menu-button">
+                <img src="images/close.svg" alt="Close Hamburger Menu Icon" class="header-icon-close-img invert"/>
+            </button>
+        </div>
+        <div id="header-logo-div">
+            <a href="home.html">
+                <img id="header-logo-img" src="images/minotaur-logo-trimmed.png" alt="Minotaur Logo">
+            </a>
+        </div>
+        <div class="header-icon header-icon-right">
+            <!-- TODO: ADD search feature if i have time -->
+            <a href="" class="header-icon-search-link">
+                <img src="images/search.svg" alt="Search Icon" class="header-icon-search-img invert"/>
+            </a>
+            <a href="" class="header-icon-cart-link">
+                <img src="images/cart.svg" alt="Cart Icon" class="header-icon-cart-img invert"/>
+            </a>
+        </div>
+    </header>
+
+    <div id="hamburger-menu" class="hamburger-menu">
+        <!-- ideally, with react or a similar framework, 
+        this menu would be included as a component to make the code 
+        more modular / less repetitive across page files -->
+        <nav class="hamburger-menu-nav">
+            <ul>
+                <li href="home.html">
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="listofproducts.html">Comics</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">More</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main-content" id="main-content-product">
+        <section class="product-display">
+            <div class="product-image">
+                <img src="images/products/uxm5.webp" alt="Product Image class="product-image-img">
+            </div>
+            <aside class="product-details">
+                <h1 class="product-title">The Uncanny X-Men Omnibus Vol. 5</h1>
+                <h3 class="product-author">Chris Claremont, John Romita Jr.</h3>
+                <h3 class="product-price">124.99</h3>
+                <div class="product-cart-buttons-div">
+                    <button class="product-add-to-cart">Add to Cart</button>
+                    <div class="product-quantity-div">
+                        <!-- TODO: make minus/plus buttons work with JS -->
+                        <button class="quantity-minus">-</button>
+                        <p class="product-quantity-input">1</p>
+                        <button class="quantity-plus">+</button>
+                    </div>
+                </div>
+                <p class="product-description">Chris Claremont, together with an absolute dream team of art talent - John Romita Jr., Arthur Adams, Barry Windsor-Smith and Dave Cockrum - brings you more indisputable mutant masterworks! From Juggernaut's earthshaking return to the second \"Lifedeath\" to the conclusion of the Asgardian Wars, they're Marvel milestones one and all! You'll also see the birth of Nathan Summers and witness his \"Days of Future Past\" sibling Rachel coming to terms with the power of the Phoenix Force! The Beyonder and the mutant-hunting Nimrod loom over it all, and Barry Windsor-Smith crafts a defining Wolverine tale in \"Wounded Wolf.\" Also featuring Dave Cockrum's swashbuckling NIGHTCRAWLER limited series, and Ann Nocenti and Arthur Adams' quintessentially '80s LONGSHOT limited series!</p>
+            </aside>
+        </section>
+    </main>
+
+    <section class="section-with-header" id="main-products-new-with-header">
+        <h2 class="main-product-header" id="main-product-header-new">You may also like...</h2>
+
+        <!-- write script to remove current product from section if i have time -->
+        <section class="main-products main-products-new">
+            <div class="main-product main-product-new" id="main-product-uxm5" data-id="1">
+                <img src="images/products/uxm5.webp" alt="Cover Image for Uncanny X-Men Omnibus Vol. 5" class="product-img" id="product-img-uxm5">
+                <p class="product-name" id="product-name-uxm5">Uncanny X-Men Omnibus Vol. 5</p>
+                <p class="product-price" id="product-price-uxm5">$124.99</p>
+                <button class="button-addtocart">Add to Cart</button>
+            </div>
+            <div class="main-product main-product-new" id="main-product-killjoys" data-id="2">
+                <img src="images/products/killjoys.jpg" alt="Cover Image for The True Lives of the Fabulous Killjoys: National Anthem" class="product-img" id="product-img-killjoys">
+                <p class="product-name" id="product-name-killjoys">The True Lives of the Fabulous Killjoys: National Anthem</p>
+                <p class="product-price" id="product-price-killjoys">$59.99</p>
+                <button class="button-addtocart">Add to Cart</button>
+            </div>
+            <div class="main-product main-product-new" id="main-product-grommets" data-id="3">
+                <img src="images/products/grommets.jpg" alt="Cover Image for Grommets" class="product-img" id="product-img-grommets">
+                <p class="product-name" id="product-name-grommets">Grommets</p>
+                <p class="product-price" id="product-price-grommets">$29.99</p>
+                <button class="button-addtocart">Add to Cart</button>
+            </div>
+            <div class="main-product main-product-new" id="main-product-eastofwest" data-id="4">
+                <img src="images/products/eastofwest.jpg" alt="Cover Image for East of West: The End Times Compendium" class="product-img" id="product-img-eastofwest">
+                <p class="product-name" id="product-name-eastofwest">East of West: The End Times Compendium</p>
+                <p class="product-price" id="product-price-eastofwest">$124.99</p>
+                <button class="button-addtocart">Add to Cart</button>
+            </div>
+            <div class="main-product main-product-new" id="main-product-radiantblack" data-id="5">
+                <img src="images/products/radiantblack.jpg" alt="Cover Image for Radiant Black Volume 6: The Catalyst War" class="product-img" id="product-img-radiantblack">
+                <p class="product-name" id="product-name-radiantblack">Radiant Black Volume 6: The Catalyst War</p>
+                <p class="product-price" id="product-price-radiantblack">$32.99</p>
+                <button class="button-addtocart">Add to Cart</button>
+            </div>
+            <div class="main-product main-product-new" id="main-product-snotgirl" data-id="6">
+                <img src="images/products/snotgirl.jpg" alt="Cover Image for Snotgirl Volume 1: Green Hair Don't Care" class="product-img" id="product-img-snotgirl">
+                <p class="product-name" id="product-name-snotgirl">Snotgirl Volume 1: Green Hair Don't Care</p>
+                <p class="product-price" id="product-price-snotgirl">$18.99</p>
+                <button class="button-addtocart">Add to Cart</button>
+            </div>
+        </section>
+    </section>
+
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/pageLoader.js"></script>
+    <script src="scripts/productLoader.js"></script>
 </body>
 </html>

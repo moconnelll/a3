@@ -1,0 +1,78 @@
+.list-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.category-and-num {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1rem;
+}
+.category-and-num h1 {
+    font-size: 2rem;
+    margin-right: 2vw;
+    font-weight: 600;
+}
+.category-and-num h3 {
+    font-weight: 500;
+    margin-right: 2vw;
+}
+.sort-and-filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1rem;
+    gap: 0.5vw;
+}
+.sort-and-filter button {
+    width: 170px;
+    height: 40px;
+    vertical-align: center;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    transition: 0.15s;
+    background-color: lightgray;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+}
+.sort-and-filter button:hover {
+    /* using invert of color as a workaround, 
+    since we are using invert filter on the icon */
+    background-color: #6bfb4b;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.3s ease;
+}
+
+/* TODO: might need to change to 600px  for compatibility with products */
+@media screen and (max-width: 750px) {
+    .list-header {
+        flex-direction: column;
+    }
+    .category-and-num {
+        justify-content: space-between;
+    }
+    .sort-and-filter {
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .sort-and-filter button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .main-products {
+        flex-wrap: wrap !important;
+        overflow-x: hidden !important;
+    }
+    
+}

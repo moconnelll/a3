@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minotaur</title>
     <link rel="stylesheet" href="style.css">
-    <!-- TODO: come back to uncomment css reset stylesheet, if still required -->
-    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="listofproducts.css">
 
-    <!-- page icons in header come from free "coolicons" repo-->
-
-    <!-- linking default font "Inter" from Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <header id="page-header">
         <div class="header-icon header-icon-nav">
             <button id="hamburger-menu-button" href="" class="header-icon-nav-link">
@@ -47,7 +44,7 @@
         more modular / less repetitive across page files -->
         <nav class="hamburger-menu-nav">
             <ul>
-                <li>
+                <li href="home.html">
                     <a href="home.html">Home</a>
                 </li>
                 <li>
@@ -68,47 +65,27 @@
             </ul>
         </nav>
     </div>
-    
-    <main class="main-content" id="main-content-home">
-        <!-- top-space-filler is solely to make sure the top blank 25px 
-         (that should be a margin-top on main-carousel)
-         is dimmed when the hamburger menu is opened -->
-        <div class="top-space-filler"></div>
-        <section class="main-carousel">
-            <!-- TODO: add/create promo images/featured products-->
-            <!-- TODO: animated slideshow would also be good -->
-            <p>Promotional Image</p>
-        </section>
 
-        <aside class="main-carousel-dots">
-            <!-- TODO: add these -->
-        </aside>
-
-        <section class="main-categories main-categories-publishers">
-            <div class="main-category main-category-publisher">
-                <img src="images/logos/marvel.png" alt="Marvel Comics Logo" id="category-logo-marvel">
+    <main class="main-content" id="main-content-list-of-products">
+        <section class="list-header">
+            <div class="category-and-num">
+                <h1>Comics</h1>
+                <h3>12 items</h3>
             </div>
-            <div class="main-category main-category-publisher">
-                <img src="images/logos/dc.png" alt="DC Comics Logo" id="category-logo-dc">
-            </div>
-            <div class="main-category main-category-publisher">
-                <img src="images/logos/image.png" alt="Image Comics Logo" id="category-logo-image">
-            </div>
-            <div class="main-category main-category-publisher">
-                <img src="images/logos/darkhorse.png" alt="Dark Horse Logo" id="category-logo-darkhorse">
-            </div>
-            <div class="main-category main-category-publisher">
-                <img src="images/logos/fantagraphics.png" alt="Fantagraphics Logo" id="category-logo-fantagraphics">
-            </div>
-            <div class="main-category main-category-publisher">
-                <p class="main-category-text" id="category-text-all-publishers">All Publishers</p>
+            <div class="sort-and-filter">
+                <button class="sort-button">
+                    <img src="images/sort.svg" alt="Sort Icon" class="sort-icon">
+                    Sort
+                </button>
+                <button class="filter-button">
+                    <img src="images/filter.svg" alt="Filter Icon" class="filter-icon">
+                    Filter
+                </button>
             </div>
         </section>
 
-        <section class="section-with-header" id="main-products-new-with-header">
-            <h2 class="main-product-header" id="main-product-header-new">New this week...</h2>
-
-            <section class="main-products main-products-new">
+        <!-- products below -->
+            <section class="main-products">
                 <div class="main-product main-product-new" id="main-product-uxm5" data-id="1">
                     <img src="images/products/uxm5.webp" alt="Cover Image for Uncanny X-Men Omnibus Vol. 5" class="product-img" id="product-img-uxm5">
                     <p class="product-name" id="product-name-uxm5">Uncanny X-Men Omnibus Vol. 5</p>
@@ -145,38 +122,6 @@
                     <p class="product-price" id="product-price-snotgirl">$18.99</p>
                     <button class="button-addtocart">Add to Cart</button>
                 </div>
-            </section>
-        </section>
-        
-        <section class="section-with-header" id="main-categories-genres-with-header">
-            <h2 class="main-genre-header" id="main-product-header-new">Browse by Genre...</h2>
-
-            <section class="main-categories main-categories-genres">
-                <div class="main-category main-category-genres">
-                    <p class="main-category-text" id="category-text-superhero">Superhero</p>
-                </div>
-                <div class="main-category main-category-genres">
-                    <p class="main-category-text" id="category-text-drama">Drama</p>
-                </div>
-                <div class="main-category main-category-genres">
-                    <p class="main-category-text" id="category-text-romance">Romance</p>
-                </div>
-                <div class="main-category main-category-genres">
-                    <p class="main-category-text" id="category-text-horror">Horror</p>
-                </div>
-                <div class="main-category main-category-genres">
-                    <p class="main-category-text" id="category-text-lgbtqia">LGBTQIA+</p>
-                </div>
-                <div class="main-category main-category-genres">
-                    <p class="main-category-text" id="category-text-all">All Genres</p>
-                </div>
-            </section>
-        </section>
-
-        <section class="section-with-header" id="main-products-featured-with-header">
-            <h2 class="main-product-header" id="main-product-header-featured">Featured...</h2>
-
-            <section class="main-products main-products-featured">
                 <div class="main-product main-product-featured" id="main-product-wonderwoman" data-id="7">
                     <img src="images/products/wonderwoman.jpg" alt="Cover Image for Absolute Wonder Woman Volume 1: The Last Amazon" class="product-img" id="product-img-wonderwoman">
                     <p class="product-name" id="product-name-wonderwoman">Absolute Wonder Woman Volume 1: The Last Amazon</p>
@@ -214,12 +159,7 @@
                     <button class="button-addtocart">Add to Cart</button>
                 </div>
             </section>
-        </section>
     </main>
-
-    <footer>
-        <!-- TODO: make footer -->
-    </footer>
 
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/products.js"></script>

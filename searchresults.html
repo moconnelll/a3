@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minotaur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="listofproducts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header id="page-header">
+        <div class="header-icon header-icon-nav">
+            <button id="hamburger-menu-button" href="" class="header-icon-nav-link">
+                <img src="images/nav.svg" alt="Hamburger Menu Icon" class="header-icon-nav-img invert"/>
+            </button>
+            <button id="close-hamburger-menu-button" href="" class="close-hamburger-menu-button">
+                <img src="images/close.svg" alt="Close Hamburger Menu Icon" class="header-icon-close-img invert"/>
+            </button>
+        </div>
+        <div id="header-logo-div">
+            <a href="home.html">
+                <img id="header-logo-img" src="images/minotaur-logo-trimmed.png" alt="Minotaur Logo">
+            </a>
+        </div>
+        <div class="header-icon header-icon-right">
+            <!-- TODO: ADD search feature if i have time -->
+            <a href="" class="header-icon-search-link">
+                <img src="images/search.svg" alt="Search Icon" class="header-icon-search-img invert"/>
+            </a>
+            <a href="" class="header-icon-cart-link">
+                <img src="images/cart.svg" alt="Cart Icon" class="header-icon-cart-img invert"/>
+            </a>
+        </div>
+    </header>
+
+    <div id="hamburger-menu" class="hamburger-menu">
+        <!-- ideally, with react or a similar framework, 
+        this menu would be included as a component to make the code 
+        more modular / less repetitive across page files -->
+        <nav class="hamburger-menu-nav">
+            <ul>
+                <li href="home.html">
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="listofproducts.html">Comics</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">More</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main-content" id="main-content-list-of-products">
+        <section class="list-header">
+            <div class="category-and-num">
+                <h1>Comics</h1>
+                <h3>12 items</h3>
+            </div>
+            <div class="sort-and-filter">
+                <button class="sort-button">
+                    <img src="images/sort.svg" alt="Sort Icon" class="sort-icon">
+                    Sort
+                </button>
+                <button class="filter-button">
+                    <img src="images/filter.svg" alt="Filter Icon" class="filter-icon">
+                    Filter
+                </button>
+            </div>
+        </section>
+
+        <!-- products below -->
+            <section class="main-products">
+                <div class="main-product main-product-new" id="main-product-uxm5" data-id="1">
+                    <img src="images/products/uxm5.webp" alt="Cover Image for Uncanny X-Men Omnibus Vol. 5" class="product-img" id="product-img-uxm5">
+                    <p class="product-name" id="product-name-uxm5">Uncanny X-Men Omnibus Vol. 5</p>
+                    <p class="product-price" id="product-price-uxm5">$124.99</p>
+                    <button class="button-addtocart">Add to Cart</button>
+                </div>
+                <div class="main-product main-product-featured" id="main-product-hiphop" data-id="11">
+                    <img src="images/products/hiphop.jpg" alt="Cover Image for Ed Piskor's Hip Hop Family Tree: The Omnibus" class="product-img" id="product-img-hiphop">
+                    <p class="product-name" id="product-name-hiphop">Ed Piskor's Hip Hop Family Tree: The Omnibus</p>
+                    <p class="product-price" id="product-price-hiphop">$129.99</p>
+                    <button class="button-addtocart">Add to Cart</button>
+                </div>
+            </section>
+    </main>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/productLoader.js"></script>
+</body>
+</html>
