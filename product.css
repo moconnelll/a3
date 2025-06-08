@@ -4,6 +4,10 @@
     justify-content: center;
     height: 100%;
     padding: 1rem;
+    padding-top: 0;
+}
+.top-space-filler {
+    height: 25px;
 }
 .product-image {
     width: fit-content;

@@ -32,7 +32,7 @@
         </div>
         <div class="header-icon header-icon-right">
             <!-- TODO: ADD search feature if i have time -->
-            <a href="" class="header-icon-search-link">
+            <a href="searchresults.html" class="header-icon-search-link">
                 <img src="images/search.svg" alt="Search Icon" class="header-icon-search-img invert"/>
             </a>
             <a href="" class="header-icon-cart-link">
@@ -215,12 +215,77 @@
                 </div>
             </section>
         </section>
+
+        <footer>
+            <!-- footer is only nested within main so that it can be covered by the 
+             dimming overlay when the hamburger menu is opened,
+             but i understand that ideally it should be separate -->
+            <div class="footer-content">
+                <div class="footer-leftmost-div">
+                    <div class="footer-minotaur-logo">
+                        <img src="images/minotaur-logo-trimmed.png" alt="">
+                    </div>
+    
+                    <div class="footer-socials-and-copyright">
+                        <div class="footer-socials">
+                            <img src="images/instagram.svg" alt="Instagram Logo" class="invert">
+                            <img src="images/facebook.svg" alt="Facebook Logo" class="invert">
+                            <img src="images/twitter.svg" alt="Twitter (X) Logo" class="invert">
+                            <img src="images/youtube.svg" alt="YouTube Logo" class="invert">
+                        </div>
+                        
+                        <div class="footer-copyright">
+                            <p>© 2002 - 2025 Minotaur Entertainment | Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-address-and-contact">
+                    <div class="footer-address">
+                        <p>Address:
+                            Minotaur Entertainment
+                            264 Little Collins Street
+                            Melbourne VIC 3000
+                        </p>
+                    </div>
+    
+                    <div class="footer-contact">
+                        <p>Contact Info:
+                            Phone: +61 3 9670 5414
+                            Comics: +61 3 9670 5415
+                            Hours: 10am to 6pm
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div class="footer-subscribe">
+                    <input type="email" placeholder="Enter e-mail..." class="footer-subscribe-input">
+                    <button>Subscribe to Newsletter</button>
+                </div>
+
+                <!-- i would prefer to align these at the bottom for mobile view.
+                 i cannot seem to figure out if there is an alternative to flex order
+                 to include nested elements and their parents, so i am opting
+                 to use a workaround that changes visibility display: 
+                 at various screen widths -->
+                <div class="footer-socials-and-copyright-mobile">
+                    <div class="footer-socials">
+                        <img src="images/instagram.svg" alt="Instagram Logo" class="invert">
+                        <img src="images/facebook.svg" alt="Facebook Logo" class="invert">
+                        <img src="images/twitter.svg" alt="Twitter (X) Logo" class="invert">
+                        <img src="images/youtube.svg" alt="YouTube Logo" class="invert">
+                    </div>
+                    
+                    <div class="footer-copyright">
+                        <p>© 2002 - 2025 Minotaur Entertainment | Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </footer>    
     </main>
 
-    <footer>
-        <!-- TODO: make footer -->
-    </footer>
-
+    
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/products.js"></script>
     <script src="scripts/productLoader.js"></script>
