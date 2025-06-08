@@ -1,0 +1,243 @@
+.order-summary-full-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.order-summary-full {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* workaround to force resizing gap rather than elements */
+    width: 30000px;
+}
+
+.order-products {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.order-product-container {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+    justify-content: start;
+}
+
+.order-product-image img {
+    height: 100%;
+    width: 125px;
+    margin-left: 10px;
+}
+
+.order-product-details {
+    display: flex;
+    max-width: 475px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 2rem;
+    gap: 3rem;
+}
+
+.order-product-maindetails {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.order-product-price {
+    color: #9404B4;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.order-product-title-author {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+    max-width: 400px;
+}
+.order-product-title-author h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+.order-product-title-author p {
+    font-size: 1rem;
+}
+
+.order-product-shipping-and-quantity {
+    display: flex;
+    width: 400px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.order-product-shipping {
+    color: #9404B4;
+}
+
+/* subtotal section */
+
+.order-total-div {
+    min-width: 200px;
+    width: 400px;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+.total-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-left: 25px;
+    height: auto;
+}
+.total-line h3 {
+    margin: 5px;
+    
+}
+.total-line-gst h3 {
+    color: lightgray;
+    font-weight: 500;
+}
+
+#promo-code-field {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: Inter, sans-serif;
+}
+
+#add-note-field {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: Inter, sans-serif;
+}
+
+.checkout {
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.checkout:hover {
+    background-color: #9404B4;
+    color: white;
+}
+
+#cart-you-may-also-like {
+    border-top: 2px solid black;
+    margin-top: 50px;
+    margin-bottom: -30px;
+}
+
+/* write query at 850px */
+@media screen and (max-width: 850px) {
+    .order-summary-full {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        text-wrap: wrap !important;
+    }
+    .order-product-maindetails {
+        flex-direction: column;
+        align-items: start;
+        margin-left: 0;
+        min-width: 85%;
+        max-width: 85% !important;
+    }
+    .order-product-title-author {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .order-product-title-author h2 {
+        font-size: 1.1rem;
+    }
+    .order-product-price {
+        font-size: 0.9rem;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .order-product-container {
+        flex-direction: row;
+        height: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .order-product-shipping-and-quantity {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: auto;
+        font-size: auto;
+        margin: 0;
+        gap: 0.5rem;
+    }
+    .order-product-image {
+        display: flex;
+        align-items: center;
+    }
+    .order-product-image img {
+        height: auto;
+    }
+    .cart-quantity-div {
+        margin: 0;
+        display: none;
+    }
+    .cart-quantity-div button {
+        margin: 0;
+    }
+    .order-product-shipping-and-quantity p {
+        margin-top: -20px;
+        font-size: 0.9rem;
+    }
+    .order-product-shipping-and-quantity button,  .order-product-shipping-and-quantity input {
+        width: auto;
+    }
+    
+    .order-total-div {
+        border-top: 2px solid black;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 25px;
+        margin-top: 50px;
+    }
+    .total-extras {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .checkout {
+        margin-bottom: 50px;
+    }
+}
+

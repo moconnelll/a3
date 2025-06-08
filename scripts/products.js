@@ -13,7 +13,7 @@ const products = [
         name: "The True Lives of the Fabulous Killjoys: National Anthem",
         image: "../a3/images/products/killjoys.jpg",
         price: 59.99,
-        author: "Gerard Way, Shaun Simon, Becky Cloonan",
+        author: "Gerard Way, Shaun Simon",
         description: "Forget everything you already knew about the Fabulous Killjoys! Writers Gerard Way and Shaun Simon, along with Illustrator Leonardo Romero (Hawkeye), colorist Jordie Bellaire (Redlands), and letterer Nate Piekos (The Umbrella Academy) team up to present an all-new modern day Killjoys series, as Way and Simon take it all the way back to the original story that inspired My Chemical Romance's concept album Danger Days and its dystopian comic book series in The True Lives of the Fabulous Killjoys: National Anthem. The Fabulous Killjoys, once a group of teenage exterminators determined to save reality, have lost their way--and their memories. Mike Milligram hits the road to bring the gang back together for a final showdown against an evil pharmaceutical corporation, their monstrous hitman, and savage gang rivals."
     },
     {
