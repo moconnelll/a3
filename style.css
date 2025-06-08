@@ -99,6 +99,7 @@ html body {
 }
 
 .hamburger-menu.open {
+    /* TODO: slide across from left with negative margin if i have time */
     display: flex;
     transition: 0.5s ease;
 }
@@ -406,6 +407,11 @@ html body {
     margin-bottom: 10px;
 }
 
+.main-product img:hover {
+    cursor: pointer;
+    border: 2px solid #9404B4;
+}
+
 .main-product p {
     width: 200px;
     margin-bottom: 10px;
@@ -414,6 +420,7 @@ html body {
 
 .main-product > .product-name {
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .main-product > .product-price {
