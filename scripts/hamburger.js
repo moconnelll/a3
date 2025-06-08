@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // getting the hamburger menu and buttons within home.html
+    // getting the hamburger menu and buttons within index.html
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const hamburgerMenuButton = document.getElementById('hamburger-menu-button');
     const closeHamburgerMenuButton = document.getElementById('close-hamburger-menu-button');
